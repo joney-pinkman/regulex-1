@@ -62,7 +62,7 @@ function visualize(re,flags,paper) {
   },startX);
   width+=PAPER_MARGIN;
   height=charSize.height+PAPER_MARGIN*2;
-  texts=paper.add(texts);
+  // texts=paper.add(texts);
   
   paper.setSize(width,charSize.height+PAPER_MARGIN*2);
 

@@ -300,7 +300,7 @@ function toPrint(s,isRaw) {
   var ctrl=/[\x00-\x1F\x7F-\x9F]/,unicode=/[\u009F-\uFFFF]/;
   s=s.split('').map(function (c) {
     if (!isRaw && printEscapeMap.hasOwnProperty(c)) return printEscapeMap[c];
-    else if (unicode.test(c)) return '\\u'+('00'+ord(c).toString(16).toUpperCase()).slice(-4);
+    // else if (unicode.test(c)) return '\\u'+('00'+ord(c).toString(16).toUpperCase()).slice(-4);
     else if (ctrl.test(c)) return '\\x'+("0"+ord(c).toString(16).toUpperCase()).slice(-2);
     return c;
   }).join('');
